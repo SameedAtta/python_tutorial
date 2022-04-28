@@ -10,11 +10,11 @@ import pandas as pd
 names= ['umer', 'ali', 'usman']
 ages =[21,23,25]
 
-data = []
+data = pd.DataFrame()
 
 
 for name, age in zip(names, ages):
-    data.append({'name': name, 'age':age})
+    data = data.append({'name': name, 'age':age}, ignore_index=True)
 # Create from lists
 # data_dicts = [
 # {'name':"john","gender":'male','age':45},
@@ -23,4 +23,4 @@ for name, age in zip(names, ages):
 # ]
 
 
-df = pd.DataFrame.from_records(data)
+# df = pd.DataFrame.from_records(data)
